@@ -1,0 +1,31 @@
+{
+  "name": "writing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nr-johnson/writing.git"
+  },
+  "author": "NRJohnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nr-johnson/writing/issues"
+  },
+  "homepage": "https://github.com/nr-johnson/writing#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12",
+    "cloudinary": "^1.30.0",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongodb": "^4.7.0",
+    "password-hash": "^1.2.2",
+    "pug": "^3.0.2"
+  }
+}

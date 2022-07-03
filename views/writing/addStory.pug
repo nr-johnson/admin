@@ -1,0 +1,19 @@
+extends ../layout
+
+block head 
+    title Admin | Add Story
+
+block body
+    main
+        nav
+            a(href='/writing')= '< Return'
+        hr
+        div
+    form(action="/writing/addstory" method='POST')
+        h3 Add Story
+        input(type="text" name='link' placeholder='Link ot Vocal Story')
+        label(for='publish' style='text-align: start;')
+            | Publish?
+            input(type="checkbox" name='publish' style='margin: .5rem auto .5rem .5rem; width: 1rem;' checked=true)
+        br
+        button(type='submit') Submit 

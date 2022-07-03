@@ -1,0 +1,21 @@
+extends layout
+
+block head
+    title NRJohnson | Admin
+
+block body
+    main
+        h1 NRJohnson Admin
+        hr
+        section
+            header
+                h2 Sites:
+            ul
+                li
+                    a(href='/writing') Writing
+                li
+                    a(href='/book') Book
+                li
+                    a(href='/web') Web
+        form(class='logout' method='POST' action='logout')
+            button Logout

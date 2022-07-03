@@ -1,0 +1,64 @@
+extends ../layout
+
+block head 
+    title Admin | Story Preview
+    style.
+        figure {
+            width: 20%;
+            height: auto;
+            margin: 0;
+        }
+        img {
+            width: 100%;
+        }
+
+block body
+    main
+        nav
+            a(href='/writing/addstory')= '< Cancel'
+        hr
+        div
+    form(action="/writing/confirmstory" method='POST')
+        h3 Story Priview
+        div
+            h4 Title: 
+                = data.title
+            input(type="text" name='title' value=data.title style='display: none;')
+        if exists
+            div 
+                hr
+                p Story already exists:
+                p Id: 
+                    = exists._id
+                input(type="text" name='_id' value=exists._id style='display: none;')
+        div 
+            hr
+            p URL: 
+                = data.url
+            input(type="text" name='url' value=data.url style='display: none;')
+        div 
+            hr
+            p Published: 
+                = data.published
+            input(type="checkbox" name='published' checked=data.published style='display: none;')
+        div 
+            hr
+            figure 
+                img(src=data.image)
+            input(type="text" name='image' value=data.image style='display: none;')
+        div 
+            hr
+            p Preview: 
+            p= data.preview
+            input(type="text" name='preview' value=data.preview style='display: none;')
+        div 
+            hr
+            p Story: 
+            p= data.content
+            input(type="text" name='content' value=data.content style='display: none;')
+
+        button(type='submit') 
+            if exists
+                | Update
+            else
+                | Confirm 

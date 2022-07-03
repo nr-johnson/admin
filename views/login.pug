@@ -1,0 +1,15 @@
+extends layout
+
+block head
+    title Admin Login
+
+block body
+    main
+        form(action='/login' method='POST' class='login' name='login')
+            h2 Login
+            div(class='input-item')
+                input(type="text" name='username' required=true placeholder='Username')
+            div(class='input-item')
+                input(type="password" name='password' required=true placeholder='Password')
+            div(class='input-item btn')
+                button(type='submit') Submit

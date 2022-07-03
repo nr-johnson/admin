@@ -1,0 +1,57 @@
+body {
+    background-color: #333;
+    color: white;
+}
+
+main {
+    padding: 2rem;
+}
+
+a {
+    color: #ddd;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+form {
+    width: 75%;
+    margin: auto;
+}
+form.logout {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: fit-content
+}
+
+.input-item {
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.btn {
+    text-align: end;
+}
+
+input {
+    padding: .25rem 0 .25rem .25rem;
+    width: 100%;
+    margin: auto;
+}
+
+button {
+    padding: .25rem;
+}
+
+@media (min-width: 768px) {
+    .login {
+        width: 30%;
+    }
+    form.logout {
+        bottom: 4rem;
+        right: 4rem;
+    }
+  }
